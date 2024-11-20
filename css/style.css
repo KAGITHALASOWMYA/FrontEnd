@@ -1,0 +1,38 @@
+h3{
+    color: brown;
+}
+   /*type selector*/
+    h3{
+        color:royalblue; 
+
+    }
+    /*class selector*/
+    .highlight{
+        color:crimson
+    }
+    /*universal selector*/
+    *{
+        background-color: aqua;
+    }
+    /*descendant selector*/
+    div p{
+        color: blueviolet;
+        background-color:deeppink;
+        padding: 5px;
+    
+    }
+    /*child selector*/
+    div>h2{
+        color:bisque
+    }
+    /*attribute selector*/
+    input[type="email"]{
+        color: cornflowerblue;
+    }
+
+    /*grouping sector*/
+    h1,h2,h3{
+        padding: 50px;
+    }
+    
+    
