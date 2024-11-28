@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*pseudo class*/
+        box{
+            width: 100px;
+            height: 200px;
+        }
+       button{
+            width: 200px;
+            height: 100px;
+        }
+        button:hover {
+        color: blueviolet;
+
+       }
+       /*parts of elements*/
+       h1::before{
+        content: "🌟";
+        color: aqua;
+       }
+       h1::after{
+        content: "🌟";
+        color: brown;
+       }
+       h1::first-letter{
+        content: 🌟;
+        color: cornflowerblue;
+       }
+       h1::first-line{
+        content: "🌟";
+        color: cornflowerblue;
+       }
+       h1::selection{
+        content: 🌟;
+        color: darkgreen;
+       }
+       /*borders*/
+       .simple-shadow{
+        width: 200px;
+        height: 200px;
+        box-shadow:5px 5px 10px rgb(54, 54, 214),5px 5px 10px rgba(54, 54, 214);
+       }
+       /*Gradients*/
+       .simple-shadow{
+       background:linear-gradient(45deg,red,yellow,blue);
+       background:radial-gradient(circle,red,yellow,blue);
+       background:conic-gradient(green,brown,aqua);
+       box-shadow:5px 5px 10px rgb(54, 54, 214),5px 5px 10px rgba(54, 54, 214);
+       }
+    </style>
+    </head>
+</body>
+ <button>hello</button>
+ <h1>hello everyone</h1>
+ <div class="box simple-shadow">Simple Shadow</div>
+</html>
