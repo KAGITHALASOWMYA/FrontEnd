@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 20px;
+       }
+       span{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 20px;
+
+       }
+       /*transition elements
+       .box:hover{
+        transition: background-color is ease 2s;
+        background-color: chartreuse;
+       }*/
+       /*timing functions*/
+       .ease{
+        transition: width2s ease;
+       }
+       .linear{
+        transition: width2s linear;
+       }
+       .ease-in{
+        transition: width2s ease-in;
+       }
+       .ease-out{
+        transition: width2s ease-out;
+       }
+       .ease-in-out{
+        transition: width2s ease-in-out;
+       }
+       span{
+        display: block;
+        display: inline;
+        display: inline-block;
+        display: none;
+        display: flex;
+        display: grid;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+       }
+    </style>
+</head>
+<body>
+    <!-- transition element
+    <div class="box">Transition</div>-->
+    <!--timing functions-->
+    <div class="box ease">ease</div>
+    <div class="box ease">linear</div>
+    <div class="box ease">ease-in</div>
+    <div class="box ease">ease-out</div>
+    <div class="box ease">ease-in-out</div>
+    <span>Sowmya</span>
+    <span>Sowmya</span>
+    <div id="message" style="background-color:blueviolet;padding: 10px;">this message cant be hidden</div>
+    <div style="display:table;width: 100%;background-color: blanchedalmond;">hide message</div>
+    
+</body>
+</html>
