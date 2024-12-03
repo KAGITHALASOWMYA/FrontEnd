@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
+  
+  
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2kOZCIzDsnEI2YeKKKVzGr2ytaKyfE2IYbQ&s');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(11, 6, 82, 0.5);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 20px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
