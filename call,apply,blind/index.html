@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employee1={firstName:"sonu",lastName:"sono"};
+        var employee2={firstName:"sowmya",lastName:"sony"};
+        function invite(greeting1,greeting2){
+            console.log(greeting1+""+this.firstName+""+this.lastName+""+greeting2);
+        }
+        invite.call(employee1, "hello","how are you?");
+        invite.apply(employee2, ["hello","how are you?"]);
+        var bind=invite.bind(employee1, "hello","how are you?");
+        var bind=invite.bind(employee2);
+        bind("hello","how are you")
+
+    </script>
+</body>
+</html>
