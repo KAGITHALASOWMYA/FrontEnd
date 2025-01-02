@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="quotes-container" id="quotes-container">
+        <div class="quote-text">
+            <span id="quote"></span>
+        </div>
+        <div class="quote-author">
+            <span id="author"></span>
+        </div>
+</div>
+<div class="button-container">
+    <button id="new-quote">New Quote</button>
+</div>
+<div class="loader" id="loader"></div>
+<script>
+    const quoteContainer=document.getElementById("quote-container");
+    const quoteText=document.getElementById("quote");
+    const authorText=document.getElementById("author");
+    const newQuoteBtn=document.getElementById("new-quote");
+    const loader=document.getElementById("loader");
+
+    let apiQuotes=[];
+    function newQuote(){
+        const quote=apiQuotes[Math.floor(Math.random()*apiQuotes.length)];
+        if(!quote.author){
+            authorText.textContent=quote.author;
+        }
+        quoteText.textContent=quote.text;
+        complete();
+    }
+    async function getQuotes(){
+        const apiUrl="https://jacintodesign.github.io/quotes-api/data/quotes.json";
+        try{
+            const response=await fetch(apiUrl);
+            apiQuotes=await response.json();
+            console.log(apiQuotes)
+            newQuote();
+        }catch(error){
+            console.log(error);
+        }
+    }
+    newQuoteBtn.addEventListener("click",newQuote);
+    getQuotes();
+</script>
+</body>
+</html>
